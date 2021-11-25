@@ -14,10 +14,9 @@ export default defineComponent({
     msg: String
   },
   setup() {
-    return {
-    };
-  },
-});
+    return {}
+  }
+})
 </script>
 
 <style scoped>
@@ -27,12 +26,5 @@ export default defineComponent({
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
-.main-box {
-  width: 800px;
-  height: 600px;
-  border-radius: 8px;
-  background-color: #ccc;
-  overflow: hidden;
 }
 </style>
