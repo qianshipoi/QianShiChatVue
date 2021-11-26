@@ -3,12 +3,13 @@
     <div class="avatar"></div>
     <div class="content">
       <div class="name">
-        <span>Kuriyama Mirai</span>
+        <span>Kuriyama Mirai.pdf</span>
       </div>
       <div class="desc">
-        Kuriyama Mirai
+        pdf 9mb
       </div>
     </div>
+    <div class="icon-btn"></div>
   </div>
 </template>
 
@@ -39,7 +40,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: calc(100% - 48px - 16px);
+  width: calc(100% - 48px - 40px - 38px);
   height: 69px;
 }
 .name {
@@ -61,5 +62,18 @@
   line-height: 150%;
 
   color: rgba(0, 0, 0, 0.4);
+}
+.icon-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+
+  background: rgba(97, 94, 240, 0.1);
+  border-radius: 20px;
 }
 </style>

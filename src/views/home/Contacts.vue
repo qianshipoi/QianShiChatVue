@@ -39,7 +39,6 @@ export default {
   /* White */
 
   background: #ffffff;
-  box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.08);
 }
 header {
   /* Auto Layout */

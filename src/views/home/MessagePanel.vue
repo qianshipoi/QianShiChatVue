@@ -9,7 +9,9 @@
         </div>
       </div>
     </header>
-    <main></main>
+    <main>
+      <MessageFrame />
+    </main>
     <footer>
       <input type="text"
              class="input-box" />
@@ -19,8 +21,10 @@
 
 <script>
 import { ref } from 'vue'
+import MessageFrame from './MessageFrame.vue'
 
 export default {
+  components: { MessageFrame },
   setup() {
     const state = ref({
       count: 0
@@ -63,19 +67,14 @@ header {
   left: 0px;
   top: 0px;
   border-bottom: 1px solid #00000014;
-
-  /* Inside Auto Layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin: 0px 0px;
 }
 main {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 24px;
+  width: 100%;
+  height: calc(100% - 80px - 96px);
 }
 footer {
   display: flex;

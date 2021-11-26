@@ -1,19 +1,24 @@
 <template>
   <div class="member-list">
     <div class="section-title">
-      <span>Team Members</span>
+      <span>{{title}}</span>
       <span>6</span>
     </div>
-    <MemberItem />
+    <slot></slot>
   </div>
 </template>
 
 <script>
-import MemberItem from './MemberItem.vue'
 export default {
-  components: { MemberItem },
-  setup() {
-    return {}
+  props: {
+    title: {
+      type: String,
+      default: 'Unknown'
+    }
+  },
+  setup(props) {
+    const { title } = props
+    return { title }
   }
 }
 </script>
@@ -27,7 +32,6 @@ export default {
 
   position: static;
   width: 362px;
-  height: 502px;
   left: 0px;
   top: 105px;
 
@@ -42,26 +46,21 @@ export default {
   flex-direction: row;
   align-items: center;
 
-  width: 138px;
   height: 22px;
 
   margin: 8px 0px;
 }
 .section-title > span:first-child {
-  width: 106px;
   height: 21px;
   left: 0px;
   top: 0.5px;
 
-  font-family: Metropolis;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
   line-height: 150%;
 
   color: #000000;
-
-  margin: 0px 8px;
 }
 .section-title > span:last-child {
   display: flex;

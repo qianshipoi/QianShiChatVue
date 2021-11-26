@@ -89,6 +89,7 @@ export default defineComponent({
   width: 1440px;
   height: 1024px;
   background: #f3f3f3;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.08);
 }
 .user-list {
   width: 200px;

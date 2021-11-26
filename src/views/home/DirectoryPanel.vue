@@ -5,17 +5,26 @@
       <a href="javascript:;"></a>
     </header>
     <main>
-      <MemberList />
+      <DirectoryItemPanel title="Team Members">
+        <MemberItem v-for="item in [1,2,3,4,5]"
+                    :key="item" />
+      </DirectoryItemPanel>
+      <DirectoryItemPanel title="Files">
+        <FileItem v-for="item in [1,2,3,4,5]"
+                  :key="item" />
+      </DirectoryItemPanel>
     </main>
   </div>
 </template>
 
 <script >
-import MemberList from './MemberList.vue'
+import DirectoryItemPanel from './DirectoryItemPanel.vue'
+import MemberItem from './MemberItem.vue'
+import FileItem from './FileItem.vue'
 import { ref } from 'vue'
 
 export default {
-  components: { MemberList },
+  components: { DirectoryItemPanel, MemberItem, FileItem },
   setup() {
     const state = ref({
       count: 0
@@ -42,7 +51,6 @@ export default {
   top: 0px;
 
   background: #ffffff;
-  box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.08);
 }
 header {
   display: flex;
