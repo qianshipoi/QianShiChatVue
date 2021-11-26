@@ -49,36 +49,36 @@ import DirectoryPanel from './DirectoryPanel.vue'
 export default defineComponent({
   components: { Menu, Contacts, MessagePanel, DirectoryPanel },
   setup() {
-    // const store = useStore()
-    // const router = useRouter()
-    // const selectedUser = ref({})
-    // const logout = () => {
-    //   store.commit('logout')
-    //   router.push('/login')
-    // }
-    // let {
-    //   quitPrivateChannel,
-    //   sendPrivateChannel,
-    //   joinPrivateChannel,
-    //   messages,
-    //   users
-    // } = useConnection(logout)
-    // const channelName = ref('')
-    // const userClick = async (user) => {
-    //   selectedUser.value = user
-    //   await quitPrivateChannel(channelName.value)
-    //   messages.value = []
-    //   let userId = toRaw(user).id
-    //   channelName.value = await joinPrivateChannel(userId)
-    // }
-    // return {
-    //   logout,
-    //   users,
-    //   selectedUser,
-    //   userClick,
-    //   channelName,
-    //   messages
-    // }
+    const store = useStore()
+    const router = useRouter()
+    const selectedUser = ref({})
+    const logout = () => {
+      store.commit('logout')
+      router.push('/login')
+    }
+    let {
+      quitPrivateChannel,
+      sendPrivateChannel,
+      joinPrivateChannel,
+      messages,
+      users
+    } = useConnection(logout)
+    const channelName = ref('')
+    const userClick = async (user) => {
+      selectedUser.value = user
+      await quitPrivateChannel(channelName.value)
+      messages.value = []
+      let userId = toRaw(user).id
+      channelName.value = await joinPrivateChannel(userId)
+    }
+    return {
+      logout,
+      users,
+      selectedUser,
+      userClick,
+      channelName,
+      messages
+    }
   }
 })
 </script>

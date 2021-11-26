@@ -11,7 +11,7 @@ export default function useConnection (logOut) {
 
   onBeforeMount(() => {
     connection = new HubConnectionBuilder()
-      .withUrl('http://localhost:5000/chathub', {
+      .withUrl(`${process.env.API_BASE_URL}/chathub`, {
         accessTokenFactory: () => store.state.accessToken
       })
       .configureLogging(LogLevel.Information)
