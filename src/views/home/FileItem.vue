@@ -23,25 +23,27 @@
   align-items: flex-start;
   padding: 12px;
 
-  width: 349px;
-  height: 72px;
+  width: 100%;
+  height: 58px;
 }
 .avatar {
-  width: 48px;
-  height: 48px;
+  width: 38px;
+  height: 38px;
 
   background: #d8d8d8;
   border-radius: 12px;
 
   flex: none;
-  margin: 0px 16px 0 0;
+  margin: 0px 12px 0 0;
 }
 .content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: calc(100% - 48px - 40px - 38px);
+  width: calc(100% - 38px - 32px - 36px);
   height: 69px;
+  transform: scale(0.8);
+  transform-origin: left top;
 }
 .name {
   display: flex;
@@ -69,11 +71,11 @@
   justify-content: center;
   align-items: center;
 
-  width: 40px;
-  height: 40px;
-  margin-right: 16px;
+  width: 32px;
+  height: 32px;
+  margin-left: 12px;
 
   background: rgba(97, 94, 240, 0.1);
-  border-radius: 20px;
+  border-radius: 16px;
 }
 </style>

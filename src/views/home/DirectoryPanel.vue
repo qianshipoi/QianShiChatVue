@@ -42,13 +42,10 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0px;
 
-  position: absolute;
-  width: 362px;
-  height: 1024px;
-  left: 1078px;
-  top: 0px;
+  width: calc(100% - 512px - 70px - 280px);
+  height: 100%;
+  border-left: 1px solid #00000014;
 
   background: #ffffff;
 }
@@ -59,7 +56,7 @@ header {
   align-items: center;
 
   width: 100%;
-  height: 80px;
+  height: 64px;
   padding: 0 20px;
   border-bottom: 1px solid #00000014;
 }

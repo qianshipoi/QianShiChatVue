@@ -32,63 +32,49 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 12px;
-
-  height: 93px;
+  padding: 8px;
+  width: 100%;
+  height: 74px;
 
   border-radius: 12px;
+  --avatar-w: 38px;
 
-  flex: none;
-  order: 1;
-  align-self: stretch;
-  flex-grow: 0;
   margin: 8px 0px;
+  cursor: pointer;
 }
+.message-item:hover,
 .message-item.is-selected {
   background: rgba(97, 94, 240, 0.06);
 }
 .avatar-box {
-  position: static;
-  width: 48px;
-  height: 48px;
-  left: 12px;
-  top: 12px;
+  width: var(--avatar-w);
+  height: var(--avatar-w);
 
   background: #d8d8d8;
   border-radius: 12px;
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin: 0px 16px 0px 0px;
+  margin: 0px 12px 0px 0px;
 }
 .content-box {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: calc(100% - 48px - 16px);
-  height: 69px;
+  width: calc(100% - var(--avatar-w) - 12px);
+  height: 100%;
+  font-size: 12px;
 }
 .base-info-box {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  height: 39px;
 }
 .tag-box {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 0px;
-
-  position: static;
-  height: 22px;
-  left: 0px;
-  top: 47px;
-  font-size: 12px;
-
-  margin: 8px 0px 0px;
+  font-size: 10px;
+  transform: scale(0.8);
+  transform-origin: left;
 }
 .name {
   display: flex;
@@ -96,30 +82,19 @@ export default {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 21px;
   font-weight: 600;
 }
 .name > span:last-child {
   opacity: 0.3;
 }
 .desc {
-  height: 18px;
-
-  font-family: Metropolis;
-  font-style: normal;
   font-weight: 600;
-  font-size: 12px;
-  line-height: 150%;
-
+  transform: scale(0.8);
+  transform-origin: left;
   color: rgba(0, 0, 0, 0.4);
 }
 .tag-box > span {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 2px 8px;
-
-  height: 22px;
+  padding: 2px 6px;
 
   background: #c6f6d5;
   border-radius: 12px;

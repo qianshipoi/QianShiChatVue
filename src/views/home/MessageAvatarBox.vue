@@ -38,16 +38,16 @@ export default {
   flex-direction: row-reverse;
 }
 .avatar {
-  width: 48px;
-  height: 48px;
+  width: 38px;
+  height: 38px;
   background-color: #d8d8d8;
   border-radius: 14px;
-  margin: 0 16px 0 0;
+  margin: 0 12px 0 0;
 }
 .avatar.self {
-  margin: 0 0 0 16px;
+  margin: 0 0 0 12px;
 }
 .messages {
-  width: calc(100% - 48px - 16px);
+  width: calc(100% - 38px - 12px);
 }
 </style>

@@ -85,9 +85,10 @@ export default defineComponent({
 
 <style scoped>
 .home {
+  display: flex;
   position: relative;
-  width: 1440px;
-  height: 1024px;
+  width: 1152px;
+  height: 820px;
   background: #f3f3f3;
   box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.08);
 }

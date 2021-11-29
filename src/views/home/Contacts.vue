@@ -27,16 +27,9 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px;
 
-  position: absolute;
-  z-index: 0;
-  width: 349px;
-  height: 1024px;
-  left: 88px;
-  top: 0px;
-
-  /* White */
+  width: 280px;
+  height: 100%;
 
   background: #ffffff;
 }
@@ -46,20 +39,9 @@ header {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 0px;
 
-  position: static;
-  width: 349px;
-  height: 89px;
-  left: 0px;
-  top: 0px;
-
-  /* Inside Auto Layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin: 0px 0px;
+  width: 100%;
+  height: 71px;
 
   border-bottom: 1px solid #0000001f;
 }

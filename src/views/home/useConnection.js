@@ -11,7 +11,7 @@ export default function useConnection (logOut) {
 
   onBeforeMount(() => {
     connection = new HubConnectionBuilder()
-      .withUrl(`${process.env.API_BASE_URL}/chathub`, {
+      .withUrl(`${import.meta.env.VITE_API_BASE_URL}/chathub`, {
         accessTokenFactory: () => store.state.accessToken
       })
       .configureLogging(LogLevel.Information)
@@ -23,7 +23,6 @@ export default function useConnection (logOut) {
     try {
       await connection.start()
       users.value = await connection.invoke('GetUsersAsync')
-      console.log(users)
       connection.on('ReceiveMessage', (userId, message) => {
         messages.value.push({
           id: new Date().getTime(),

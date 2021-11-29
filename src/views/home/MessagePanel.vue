@@ -43,13 +43,9 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 0px;
 
-  position: absolute;
-  width: 640px;
-  height: 1024px;
-  left: 437px;
-  top: 0px;
+  width: 512px;
+  height: 100%;
   border-left: 1px solid #00000014;
 
   background: #ffffff;
@@ -59,13 +55,9 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 24px;
 
-  position: static;
-  width: 640px;
-  height: 80px;
-  left: 0px;
-  top: 0px;
+  width: 100%;
+  height: 64px;
   border-bottom: 1px solid #00000014;
 }
 main {
@@ -80,10 +72,10 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 24px;
+  padding: 12px;
 
   border-top: 1px solid #00000014;
-  width: 640px;
+  width: 100%;
   height: 96px;
 }
 .input-box {
@@ -93,46 +85,28 @@ footer {
   align-items: center;
   padding: 10px 20px;
 
-  position: static;
-  width: 548px;
+  width: 100%;
   height: 48px;
-  left: 68px;
-  top: 24px;
-
-  /* White */
 
   background: #ffffff;
-  /* Gray/Gray:300 */
 
   border: 2px solid #e2e8f0;
   box-sizing: border-box;
   border-radius: 12px;
   outline: none;
 
-  /* Inside Auto Layout */
-
-  flex: none;
-  order: 1;
-  flex-grow: 1;
-  margin: 0px 24px;
+  margin: 0px 12px;
 }
 .user-content {
   display: flex;
 }
 .user-avatar {
-  position: static;
-  width: 40px;
-  height: 40px;
-  left: 0px;
-  top: 0px;
+  width: 38px;
+  height: 38px;
 
   background: #d8d8d8;
   border-radius: 10px;
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin: 0px 16px;
+  margin: 0px 12px;
 }
 .user-info {
   display: flex;

@@ -2,7 +2,7 @@
   <div class="member-list">
     <div class="section-title">
       <span>{{title}}</span>
-      <span>6</span>
+      <span>{{count}}</span>
     </div>
     <slot></slot>
   </div>
@@ -14,11 +14,15 @@ export default {
     title: {
       type: String,
       default: 'Unknown'
+    },
+    count: {
+      type: Number,
+      default: 0
     }
   },
   setup(props) {
-    const { title } = props
-    return { title }
+    const { title, count } = props
+    return { title, count }
   }
 }
 </script>
@@ -30,16 +34,9 @@ export default {
   align-items: flex-start;
   padding: 0px 16px;
 
-  position: static;
-  width: 362px;
-  left: 0px;
-  top: 105px;
+  width: 100%;
 
-  flex: none;
-  order: 1;
-  align-self: stretch;
-  flex-grow: 0;
-  margin: 24px 0px;
+  margin: 16px 0px;
 }
 .section-title {
   display: flex;
@@ -65,25 +62,14 @@ export default {
 .section-title > span:last-child {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 2px 8px;
+  text-align: center;
 
-  position: static;
   width: 24px;
   height: 22px;
-  left: 114px;
-  top: 0px;
-
-  /* Gray/Gray:200 */
 
   background: #edf2f7;
   border-radius: 24px;
 
-  /* Inside Auto Layout */
-
-  flex: none;
-  order: 1;
-  flex-grow: 0;
   margin: 0px 8px;
 }
 </style>

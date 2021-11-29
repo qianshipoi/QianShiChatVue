@@ -33,8 +33,8 @@ export default {
 
   position: relative;
   z-index: 1;
-  width: 88px;
-  height: 1024px;
+  width: 70px;
+  height: 100%;
 
   background: #ffffff;
   box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.08);
@@ -44,15 +44,13 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-
   width: 56px;
-
   margin: 10px 0px;
 }
 .logo {
-  width: 56px;
-  height: 56px;
-  font-size: 38px;
+  width: 48px;
+  height: 48px;
+  font-size: 32px;
   color: white;
   background: #615ef0;
   border-radius: 14px;
