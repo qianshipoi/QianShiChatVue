@@ -1,6 +1,5 @@
 <template>
   <div class="search-box">
-
     <input type="text"
            class="search-content-box"
            placeholder="Search Messages" />

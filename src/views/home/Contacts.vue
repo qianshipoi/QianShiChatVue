@@ -6,7 +6,7 @@
     </header>
     <div class="global-list">
       <Search />
-      <MessageList />
+      <MessageList :users="users" />
     </div>
   </div>
 </template>
@@ -14,10 +14,18 @@
 <script>
 import MessageList from './MessageList.vue'
 import Search from './Search.vue'
+import { toRefs, watchEffect } from 'vue'
 export default {
   components: { MessageList, Search },
-  setup() {
-    return {}
+  props: {
+    users: {
+      type: Array,
+      default: []
+    }
+  },
+  setup(props) {
+    const { users } = toRefs(props)
+    return { users }
   }
 }
 </script>
@@ -34,14 +42,13 @@ export default {
   background: #ffffff;
 }
 header {
-  /* Auto Layout */
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 
   width: 100%;
-  height: 71px;
+  height: 70px;
 
   border-bottom: 1px solid #0000001f;
 }
@@ -81,5 +88,10 @@ header > span {
   order: 1;
   flex-grow: 0;
   margin: 0px 10px;
+}
+.global-list {
+  width: 100%;
+  height: calc(100% - 70px);
+  padding: 0 10px 10px;
 }
 </style>

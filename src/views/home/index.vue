@@ -1,38 +1,9 @@
 <template>
   <div class="home">
     <Menu></Menu>
-    <Contacts />
+    <Contacts :users="users" />
     <MessagePanel />
     <DirectoryPanel />
-
-    <!-- <a-list class="user-list"
-            item-layout="horizontal"
-            :data-source="users"
-            bordered>
-      <template #renderItem="{ item }">
-        <a-list-item @click="userClick(item)"
-                     :class="{'bg-skyblue':selectedUser == item}">
-          <a-list-item-meta :description="item.nickName"
-                            style="height:40px">
-            <template #title>
-              <a href="javascript:;">{{ item.nickName }}</a>
-            </template>
-            <template #avatar>
-              <a-avatar :src="item.avatar" />
-            </template>
-          </a-list-item-meta>
-        </a-list-item>
-      </template>
-    </a-list>
-    <div class="content">
-      <a-button @click="logout">登出</a-button>
-      <h1 v-if="!!selectedUser">{{ selectedUser.nickName }}</h1>
-      <h2 v-if="!!channelName">{{channelName}}</h2>
-      <ul>
-        <li v-for="message in messages"
-            :key="message.id">{{message.message}}</li>
-      </ul>
-    </div> -->
   </div>
 </template>
 

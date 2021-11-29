@@ -1,28 +1,59 @@
 <template>
   <div class="message-item">
-    <div class="avatar-box"></div>
+    <div class="avatar-box"
+         ref="avatarBox">
+      <a-image :src="avatar"
+               :alt="name"
+               :fallback="defaultAvatar" />
+    </div>
     <div class="content-box">
       <div class="base-info-box">
         <div class="name">
-          <span>Kuriyama Mirai</span>
+          <span>{{name}}</span>
           <span>12m</span>
         </div>
         <div class="desc">
-          Kuriyama Mirai
+          {{desc}}
         </div>
       </div>
       <div class="tag-box">
-        <span>Kuriyama</span>
-        <span>Mirai</span>
+        <span v-for="item in tags"
+              :key="item">{{item}}</span>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { ref, toRefs } from '@vue/reactivity'
+import { onMounted, watchEffect } from '@vue/runtime-core'
 export default {
-  setup() {
-    return {}
+  props: {
+    avatar: {
+      type: String,
+      default: ''
+    },
+    name: {
+      type: String,
+      default: ''
+    },
+    desc: {
+      type: String,
+      default: ''
+    },
+    tags: {
+      type: Array,
+      default: []
+    }
+  },
+  setup(props) {
+    const avatarBox = ref(null)
+    const { name, desc, tags, avatar } = toRefs(props)
+    const defaultAvatar = `${
+      import.meta.env.VITE_API_BASE_URL
+    }/avatar/default-avatar.gif`
+
+    return { name, desc, tags, avatar, defaultAvatar, avatarBox }
   }
 }
 </script>
@@ -53,6 +84,12 @@ export default {
   background: #d8d8d8;
   border-radius: 12px;
   margin: 0px 12px 0px 0px;
+  overflow: hidden;
+}
+.avatar-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .content-box {
   display: flex;
